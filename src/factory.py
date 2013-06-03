@@ -7,7 +7,6 @@ class KolFactory(object):
             _module_name = 'database'
 
         _full_mod = '.'.join([_base, _module_name, name])
-        print _full_mod
         _func_name = [name] if args or kwargs else name
 
         _my_mod = __import__(_full_mod, globals(), locals(), _func_name, -1)
