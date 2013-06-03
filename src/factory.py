@@ -1,4 +1,5 @@
 class KolFactory(object):
+    """ KolFactory by Thijs de Zoete """
     def __new__(klass, name, *args, **kwargs):
         _base = 'kol'
         _module_name = 'request'
@@ -14,7 +15,3 @@ class KolFactory(object):
             return _my_mod
         else:
             return getattr(_my_mod, name)(*args, **kwargs)
-
-    def __init__(self, *args, **kwargs):
-        """ KolFactory by Thijs de Zoete """
-        pass
